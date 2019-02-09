@@ -119,5 +119,5 @@ occurences$Same5 = ct_same5
 occurences$FullHouse = ct_fullhouse
 
 # write out the final occurences dataset
-write.csv(occurences, file = 'C:\\Users\\jlmic\\Documents\\Personal Projects\\MM_Occurences.csv')
+write.csv(occurences, file = 'file_location\\MM_Occurences.csv')
 
