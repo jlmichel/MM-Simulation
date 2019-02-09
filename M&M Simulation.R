@@ -2,7 +2,8 @@
 ## M&M Simulation           ##
 ## Jacob Michel             ##
 ##############################
-
+library(ggplot2)
+library(stringr)
 ##############################
 ## Create Simulation        ##
 ##############################
@@ -36,7 +37,6 @@ brown_binom = rbinom(bag_size, 1, brown_prob)
 ##### simulate 10000 bags (where there are integer values of each color) #####
 ##############################################################################
 # will need to created column for each color 10000 X 6 where the sum of col1:col6 = 5
-library(stringr)
 first5 = data.frame(matrix(ncol=6, nrow=simulation.size))
 cols = c('red','yellow','orange','blue','green','brown')
 colnames(first5) = cols
