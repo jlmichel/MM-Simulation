@@ -86,6 +86,7 @@ for (i in 1:simulation.size) {
 
 #########################################################################
 ##### determine the occurence of 1,2...5 of the same  and fullhouse #####
+##### Full house is 3 of a kind and 2 of a kind                     #####
 #########################################################################
 alldiff = subset(first5, ((red < 2)  & (orange < 2) & (yellow < 2) & (blue < 2) & (green < 2) & (brown < 2)))
 same2 = subset(first5, ( ((red == 2) | (orange == 2) | (yellow == 2) | (blue == 2) | (green == 2) | (brown == 2)) & ((red < 3) & (orange < 3) & (yellow < 3) & (blue < 3) & (green < 3) & (brown < 3)) ) )
@@ -131,7 +132,5 @@ names(occurences2) <- c("Frequency", "Instance")
 ggplot(occurences2, aes(x = Instance, y = Frequency, label=Frequency, fill = Instance)) + 
   geom_bar(stat='identity') + geom_text(nudge_y = 300) + ggtitle("Frequency of Occurence for Pulling 5 M&M's Out of a Bag")
 
-# write out the final occurences dataset
-write.csv(occurences, file = 'file print out location\\MM_Occurences.csv')
 
 
