@@ -130,7 +130,7 @@ names(occurences2) <- c("Frequency", "Instance")
          
 # plot                 
 ggplot(occurences2, aes(x = Instance, y = Frequency, label=Frequency, fill = Instance)) + 
-  geom_bar(stat='identity') + geom_text(nudge_y = 300) + ggtitle("Frequency of Occurence for Pulling 5 M&M's Out of a Bag")
+  geom_bar(stat='identity') + geom_text(nudge_y = 300) + ggtitle("Frequency of Occurence for Pulling 5 M&M's Out of a 10000 Simulated Bags")
 
 
 
