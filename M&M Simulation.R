@@ -118,6 +118,20 @@ occurences$Same4 = ct_same4
 occurences$Same5 = ct_same5
 occurences$FullHouse = ct_fullhouse
 
+instances = colnames(occurences)
+
+# transpose dataset
+occurences2 = data.frame(matrix(ncol=2, nrow=6))
+
+occurences2$X1 = t(occurences[1,])
+occurences2$X2 = cols_occur
+names(occurences2) <- c("Frequency", "Instance")
+         
+# plot                 
+ggplot(occurences2, aes(x = Instance, y = Frequency, label=Frequency, fill = Instance)) + 
+  geom_bar(stat='identity') + geom_text(nudge_y = 300) + ggtitle("Frequency of Occurence for Pulling 5 M&M's Out of a Bag")
+
 # write out the final occurences dataset
-write.csv(occurences, file = 'file_location\\MM_Occurences.csv')
+write.csv(occurences, file = 'file print out location\\MM_Occurences.csv')
+
 
